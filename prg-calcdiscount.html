@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>discountcalc</title>
+</head>
+<body>
+
+    <h1>calculate discount and net amt</h1>
+
+    <script>
+        function calc(amt){
+            if(amt<=10000){
+                disc=(5/100)*amt
+                console.log("discount=",disc)
+                console.log("net amount=",amt-disc)
+            }
+            else if(amt>10000 && amt<=20000){
+                disc=(10/100)*amt
+                console.log("discount=",disc)
+                console.log("net amount=",amt-disc)
+            }
+            else if(amt>20000){
+                disc=(10/100)*amt
+                console.log("discount=",disc)
+                console.log("net amount=",amt-disc)
+        }
+    }
+        var amt=prompt("enter the price of the purchsed good")
+        calc(amt)
+    </script>
+</body>
+</html>      

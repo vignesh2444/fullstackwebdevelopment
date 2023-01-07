@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+</head>
+<body>
+    <h1>Simple Calculator</h1>
+
+    <label for="number">Enter a number</label><br>
+    <input type="text" name="number1" id="number1"><br>
+    <label for="number">Enter a number</label><br>
+    <input type="text" name="number2" id="number2"><br>
+    <label for="operation">Enter the operation</label><br>
+    <input type="text" name="operation" id="operation"><br>
+    <button onclick="calculate()">calculate</button>
+    <p id="display"></p>
+
+    <script>
+
+        function calculate(){
+            alert ('you have clicked on calculate')
+            let number1 = parseInt(document.getElementById("number1").value)
+            let number2 = parseInt(document.getElementById("number2").value)
+            let operation=document.getElementById("operation").value
+            if(operation=='+'){
+                let msg = "Sum="+(number1+number2)
+                document.getElementById("display").innerHTML=msg
+
+            } 
+            else if(operation=='-'){
+                sum=number1-number2
+                let mg = "Diff="+sum
+                document.getElementById("display").innerHTML=mg
+
+            }   
+            else if(operation=='*'){
+                sum=number1*number2
+                let mg = "Prod="+sum
+                document.getElementById("display").innerHTML=mg
+
+            }  
+            else if(operation=='/'){
+                sum=number1/number2
+                let mg = "Div="+sum
+                document.getElementById("display").innerHTML=mg
+
+            } 
+            else{
+                alert('Invalid operator,enter valid operator')
+            }   
+        }
+    </script>
+    
+</body>
+</html>
